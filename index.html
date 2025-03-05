@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link CSS Stylesheet -->
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <!-- Link javascripts -->
+    <script src="./scripts/main.js"></script>
+
+    <title>Web Development BT - Belastingaangifte formulier</title>
+</head>
+
+<body>
+    <section>
+        <h1>Dit is geen officiele NS website</h1>
+        <p>Gemaakt door Stephan Kok voor de opleiding CMD, Web development</p>
+    </section>
+
+
+    <section>
+        <form action="">
+            <ol>
+                <li>
+                    <fieldset>
+                        <legend>Gegevens van de overledene.</legend>
+                        <p>Vul hier de gegevens in van de overledene.</p>
+                        <ol>
+                            <li>
+                                <label for="naamInput">
+                                    Voorletter(s), tussenvoegsel(s) en achternaam.
+                                    <input type="text" name="naamInput" placeholder="Voorletter(s)">
+                                    <input type="text" name="naamInput" placeholder="Tussenvoegsel(s)">
+                                    <input type="text" name="naamInput" placeholder="Achternaam">
+                                </label>
+                                <br>
+                                <label for="burgerNmr">
+                                    Burgerservicenummer overledene
+                                    <input id="burgerNmr" type="text" inputmode="numeric" name="burgerNmr" minlength="8" maxlength="9" pattern="[0-9\s]{8,9}">
+                                </label>
+                                <label for="oDatum">
+                                    Overlijdensdatum
+                                    <input type="date" name="oDatum">
+                                </label>
+                            </li>
+
+                            <li>
+                                <label for="getrouwd">
+                                    Was de overledene getrouwd of had de overledene een geregistreerd partner op het
+                                    moment van overlijden?
+                                    <input type="radio" name="getrouwd" onchange="toggleRadio()" value="n" checked> <small>Nee, ga verder met vraag
+                                        1.3.</small>
+                                    <input type="radio" name="getrouwd" onchange="toggleRadio()" value="j"> <small>Ja</small>
+                                </label>
+
+                                <fieldset id="fieldsetOneTwo" disabled>
+                                    <label for="notaAkte">
+                                        Hadden de overledene en diens echtgenoot of geregistreerd partner huwelijkse of
+                                        partnerschapsvoorwaarden laten vastleggen in een notariële akte?
+                                        <input type="radio" name="notaAkte" value="n"> <small>Nee</small>
+                                        <input type="radio" name="notaAkte" value="j"> <small>Ja. Stuur een kopie van de
+                                            akte mee met de aangifte.</small>
+                                    </label>
+
+                                    <label for="finRekening">
+                                        Hadden de overledene en diens partner een finaal verrekenbeding?
+                                        <input type="radio" name="finRekening" value="n"> <small>Nee</small>
+                                        <input type="radio" name="finRekening" value="j"> <small>Ja</small>
+                                    </label>
+
+                                    <label for="voorDatum">
+                                        Datum huwelijkse of partnerschapsvoorwaarden
+                                        <input type="date" name="voorDatum">
+                                    </label>
+                                </fieldset>
+                            </li>
+                        </ol>
+                    </fieldset>
+
+                </li>
+
+            </ol>
+        </form>
+    </section>
+
+</body>
+
+
+</html>
