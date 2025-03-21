@@ -1,120 +1,223 @@
 @font-face {
-    font-family: "NS Sans";
-    src: url("../fonts/nssans-regular.woff2");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-   
-  @font-face {
-    font-family: "NS Sans";
-    src: url("../fonts/nssans-italic.woff2");
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "NS Sans";
-    src: url("../fonts/nssans-demi.woff2");
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-  }
-   
-  @font-face {
-    font-family: "NS Sans";
-    src: url("../fonts/nssans-bold.woff2");
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-  }
-   
-  @font-face {
-    font-family: "NS Sans";
-    src: url("../fonts/nssans-bolditalic.woff2");
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
-  }
+  font-family: "NS Sans";
+  src: url("../fonts/nssans-regular.woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
-  :root {
+@font-face {
+  font-family: "NS Sans";
+  src: url("../fonts/nssans-italic.woff2");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
 
-    /* Color variables */
-    --ns-primary-yellow: #ffc61e;
-    --ns-primary-blue: #00337f;
-    --ns-background-gray: #e6e6e9;
-    --ns-background-white: #ffffff;
-  }
+@font-face {
+  font-family: "NS Sans";
+  src: url("../fonts/nssans-demi.woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
 
-  body {
-    font-family: "NS Sans", Fallback, sans-serif;
-    color: var(--ns-primary-blue);
+@font-face {
+  font-family: "NS Sans";
+  src: url("../fonts/nssans-bold.woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
 
-    padding: 0;
-    margin: 0;
-  }
+@font-face {
+  font-family: "NS Sans";
+  src: url("../fonts/nssans-bolditalic.woff2");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
 
-  section:nth-of-type(1) {
-    background-color: var(--ns-primary-blue);
-    color: var(--ns-background-white);
+:root {
 
-    text-align: center;
-    align-content: center;
-    min-height: 10vh;
-  }
+  /* Color variables */
+  --ns-primary-yellow: #ffc61e;
+  --ns-primary-blue: #00337f;
+  --ns-background-gray: #e6e6e9;
+  --ns-background-white: #ffffff;
+  --ns_radio-checked: #00a888;
+  --ns-button-blue: #0162d3;
+  --ns-button-blue-shadow: #004b9f;
+  --ns-input-background: #f0f0f2;
+}
 
-  section:nth-of-type(1) h1{
-    margin: 0;
-  }
+body {
+  font-family: "NS Sans", Fallback, sans-serif;
+  color: var(--ns-primary-blue);
+  background-color: var(--ns-background-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-  section:nth-of-type(1) p{
-    margin: 0;
-  }
+  padding: 0;
+  margin: 0;
+}
 
-  /* Fieldsection */
-  fieldset {
-    padding: 0;
-    margin: 0;
-    border: 0;
-  }
+section {
+  margin: auto;
+}
 
-  label {
-    display: inline-block;
-    text-align: left;
-  }
+section:nth-of-type(1) {
+  background-color: var(--ns-primary-yellow);
+  color: var(--ns-primary-blue);
+  width: 100%;
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+  padding: auto;
+  margin: auto;
 
-  #burgerNmr {
-    width: 10vw;
-  }
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
 
-  /* Ordered list extra order */
-  ol {
-    list-style-type: none;
-    counter-reset: item;
-    margin: 0;
-    padding: 0;
-  }
-  
-  li {
-    display: table;
-    counter-increment: item;
-    margin-bottom: 0.6em;
-  }
-  
-  li:before {
-      content: counters(item, ".") ". ";
-      display: table-cell;
-      padding-right: 0.6em;    
-  }
-  
-  li li {
-      margin: 0;
-  }
-  
-  li li:before {
-      content: counters(item, ".") " ";
-  }
+section:nth-of-type(1) h1 {
+  margin: 0;
+}
 
-  :disabled {
-    display: none;
-  }
+section:nth-of-type(1) p {
+  margin: 0;
+}
+
+
+/* Fieldsection */
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  margin: auto;
+  background-color: var(--ns-background-white);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.fieldsetTitel {
+  font-weight: bold;
+  font-size: 2em;
+  transform: translateY(150%);
+}
+
+legend {
+  margin-bottom: 5px;
+}
+
+label {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  flex-wrap: wrap;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* Ordered list extra order */
+ol {
+  list-style-type: none;
+  counter-reset: item;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  /* display: table; */
+  counter-increment: item;
+  margin-bottom: 0.6em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+li:before {
+  content: counters(item, ".") ". ";
+  display: table-cell;
+  padding-right: 0.6em;
+}
+
+li li {
+  margin: 0;
+}
+
+li li:before {
+  content: counters(item, ".") " ";
+}
+
+:disabled {
+  display: none;
+}
+
+/* Inputs */
+input:hover {
+  cursor: pointer;
+}
+
+input[type='radio'] {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #d1d3d1;
+  accent-color: var(--ns_radio-checked);
+
+  display: inline-block;
+  visibility: visible;
+  border: 1px solid var(--ns_radio-checked);
+  padding: 20%;
+  transition: .3s;
+}
+
+input[type='text'] {
+  border-radius: 6px;
+  border-width: 0px;
+  height: 48px;
+  width: 200px;
+  transition: .3s;
+  outline: none;
+  padding-left: 16px;
+  padding-right: 16px;
+  cursor: auto;
+  background-color: var(--ns-input-background);
+}
+
+input[type='text']:focus {
+  border-color: var(--ns-primary-blue);
+  box-shadow: 0 0 0 1px var(--ns-primary-blue), 0 2px 4px rgba(0, 0, 0, .03), 0 4px 8px rgba(0, 0, 0, .03), 0 8px 16px rgba(0, 0, 0, .03);
+  outline: 2px solid transparent;
+}
+
+input:required:valid:focus {
+  border-color: green;
+  outline: 2px solid green;
+  box-shadow: 0 0 0 0;
+}
+
+input:invalid:focus {
+  border-color: red;
+  outline: 2px solid red;
+  box-shadow: 0 0 0 0;
+}
+
+button {
+  background-color: var(--ns-button-blue);
+  color: white;
+  height: 45px;
+  padding: 15px;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 5px 0 var(--ns-button-blue-shadow);
+  cursor: pointer;
+}

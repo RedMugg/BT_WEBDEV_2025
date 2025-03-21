@@ -9,8 +9,6 @@
     <!-- Link CSS Stylesheet -->
     <link rel="stylesheet" href="./styles/style.css">
 
-    <!-- Link javascripts -->
-    <script src="./scripts/main.js"></script>
 
     <title>Web Development BT - Belastingaangifte formulier</title>
 </head>
@@ -27,49 +25,74 @@
             <ol>
                 <li>
                     <fieldset>
-                        <legend>Gegevens van de overledene.</legend>
+                        <legend class="fieldsetTitel">Gegevens van de overledene.</legend>
                         <p>Vul hier de gegevens in van de overledene.</p>
                         <ol>
                             <li>
-                                <label for="naamInput">
-                                    Voorletter(s), tussenvoegsel(s) en achternaam.
-                                    <input type="text" name="naamInput" placeholder="Voorletter(s)">
-                                    <input type="text" name="naamInput" placeholder="Tussenvoegsel(s)">
-                                    <input type="text" name="naamInput" placeholder="Achternaam">
+                                <label for="voorLetters">
+                                    Voorletter(s)
+                                    <input classtype="text" id="voorLetters" placeholder="Voorletter(s)" required>
                                 </label>
-                                <br>
+
+                                <label for="tussenVoegsel">
+                                    Tussenvoegsel(s)
+                                    <input type="text" id="tussenVoegsel" placeholder="Tussenvoegsel(s)">
+                                </label>
+
+                                <label for="achternaam">
+                                    Achternaam
+                                    <input type="text" id="achternaam" placeholder="Achternaam" required>
+                                </label>
+
                                 <label for="burgerNmr">
                                     Burgerservicenummer overledene
-                                    <input id="burgerNmr" type="text" inputmode="numeric" name="burgerNmr" minlength="8" maxlength="9" pattern="[0-9\s]{8,9}">
+                                    <input id="burgerNmr" type="text" inputmode="numeric" name="burgerNmr" minlength="8"
+                                        maxlength="9" pattern="[0-9\s]{8,9}" required>
                                 </label>
+
                                 <label for="oDatum">
                                     Overlijdensdatum
-                                    <input type="date" name="oDatum">
+                                    <input type="date" id="oDatum" required>
                                 </label>
                             </li>
 
                             <li>
-                                <label for="getrouwd">
+                                <legend for="getrouwd">
                                     Was de overledene getrouwd of had de overledene een geregistreerd partner op het
                                     moment van overlijden?
-                                    <input type="radio" name="getrouwd" onchange="toggleRadio()" value="n" checked> <small>Nee, ga verder met vraag
-                                        1.3.</small>
-                                    <input type="radio" name="getrouwd" onchange="toggleRadio()" value="j"> <small>Ja</small>
+                                </legend>
+                                <label for="getrouwdNee">
+                                    Nee
+                                    <input type="radio" name="getrouwd" id="getrouwdNee" value="n">
                                 </label>
 
-                                <fieldset id="fieldsetOneTwo" disabled>
-                                    <label for="notaAkte">
+                                <label for="getrouwdJa">Ja
+                                    <input type="radio" name="getrouwd" id="getrouwdJa" value="j" checked>
+                                </label>
+
+                                <fieldset id="fieldsetOneTwo">
+                                    <legend for="notaAkte">
                                         Hadden de overledene en diens echtgenoot of geregistreerd partner huwelijkse of
                                         partnerschapsvoorwaarden laten vastleggen in een notariële akte?
-                                        <input type="radio" name="notaAkte" value="n"> <small>Nee</small>
-                                        <input type="radio" name="notaAkte" value="j"> <small>Ja. Stuur een kopie van de
-                                            akte mee met de aangifte.</small>
+                                    </legend>
+                                    <label>Nee
+                                        <input type="radio" name="notaAkte" value="n">
                                     </label>
 
-                                    <label for="finRekening">
+                                    <label>Ja. Stuur een kopie van de akte mee met de aangifte.
+                                        <input type="radio" name="notaAkte" value="j">
+                                    </label>
+
+                                    <legend>
                                         Hadden de overledene en diens partner een finaal verrekenbeding?
-                                        <input type="radio" name="finRekening" value="n"> <small>Nee</small>
-                                        <input type="radio" name="finRekening" value="j"> <small>Ja</small>
+
+                                    </legend>
+                                    <label for="finRekening"> Nee
+                                        <input type="radio" name="finRekening" value="n">
+                                    </label>
+                                    <label for="finRekening">ja
+                                        <input type="radio" name="finRekening" value="j">
+                                    </label>
                                     </label>
 
                                     <label for="voorDatum">
@@ -84,10 +107,15 @@
                 </li>
 
             </ol>
+            <button>Doorgaan</button>
         </form>
     </section>
 
 </body>
 
+
+
+<!-- Link javascripts -->
+<script src="./scripts/main.js"></script>
 
 </html>
